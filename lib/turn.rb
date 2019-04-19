@@ -3,12 +3,20 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   
+<<<<<<< HEAD
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
   else
     turn(board)
   end
+=======
+  until valid_move?(board, index)
+    turn(board)
+  end
+  move(board, index)
+  display_board(board)
+>>>>>>> 839cd16a43d93848d0bb51d95b83dfd0607ab356
 end
 
 def display_board(board)
